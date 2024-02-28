@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: #F3F5FC;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header{
+    height: 96px;
+}
+
+.container{
+    margin: 0 auto;
+    width: 375px;
+    padding: 5px 18px;
+    
+}
+
+.encryptor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 95%;
+    margin-top: 80px;
+    height: 350px;
+    background-color: inherit;
+    position: relative;
+    border: none;
+    color: #67808E;
+}
+
+input::placeholder{
+    color: #0A3871;
+    font-size: 35px;
+    position: absolute;
+    top: 0;
+}
+
+.encryptor__message{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-right: 85px;
+    color: #67808E;
+    margin: 10px 0;
+}
+
+.encryptor__message-img{
+    width: 15px;
+}
+
+.encryptor__buttons{
+    margin: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+.encryptor_encryp{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background-color: #0A3871;
+    padding: 25px 0;
+    border-radius: 25px;
+    font-size: 1.3em;
+    -webkit-box-shadow: -1px 21px 15px -15px rgba(145,134,145,1);
+-moz-box-shadow: -1px 21px 15px -15px rgba(145,134,145,1);
+box-shadow: -1px 21px 15px -15px rgba(145,134,145,1);
+
+}
+
+.encryptor_desencryp{
+    text-decoration: none;
+    text-align: center;
+    color: #0A3871;
+    background-color: #F3F5FC;
+    padding: 25px 0;
+    border: 1px solid #0A3871;
+    border-radius: 25px;
+    font-size: 1.3em;
+}
+
+.message{
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message__container{
+    width: 325px;
+    height: 234px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 25px;
+    gap: 15px;
+    background: white;
+    padding: 28px ;
+    -webkit-box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
+-moz-box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
+box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
+    
+}
+
+.message__title{
+    background: inherit;
+    font-size: 1.8em;
+}
+
+.message__paragraph{
+    background: inherit;
+    font-size: 1.3em;
+    line-height: 30px;
+}
