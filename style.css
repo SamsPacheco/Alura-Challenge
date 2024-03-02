@@ -26,7 +26,6 @@
 
 input{
     width: 95%;
-    margin-top: 80px;
     height: 350px;
     background-color: inherit;
     position: relative;
@@ -47,7 +46,6 @@ input::placeholder{
     gap: 5px;
     padding-right: 85px;
     color: #67808E;
-    margin: 10px 0;
 }
 
 .encryptor__message-img{
@@ -55,7 +53,7 @@ input::placeholder{
 }
 
 .encryptor__buttons{
-    margin: 20px;
+    margin: 10px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -122,4 +120,68 @@ box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
     background: inherit;
     font-size: 1.3em;
     line-height: 30px;
+}
+
+/** medias querys **/
+
+/** TABLETS **/
+@media (min-width: 768px) {
+
+    .header{
+        height: 160px;
+    }
+
+    .header__logo{
+        padding: 30px 25px;
+    }
+
+    input{
+        width: 700px;
+        height: 500px;
+        margin-top: 5px;
+    }
+    
+    input::placeholder{
+        color: #0A3871;
+        font-size: 45px;
+        position: absolute;
+        padding-top: 75px;
+        margin-left: 25px;
+    }
+
+    .container{
+        margin: 0 auto;
+        width: 768px;
+        padding: 5px 18px;
+        
+    }
+    
+    .encryptor__message{
+        width: 100%;
+        margin-left: 20px;
+    }
+
+    .encryptor__buttons{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .encryptor_encryp{
+        padding: 25px 120px;
+        box-shadow: none;
+    }
+    
+    .encryptor_desencryp{
+        padding: 25px 120px;
+    }
+
+    .message__container{
+        margin-top: 20px;
+        width: 685px;
+        height: 160px;
+    }
+
+    /** queda pendiente el desing desktop **/
 }
