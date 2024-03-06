@@ -86,11 +86,31 @@ box-shadow: -1px 21px 15px -15px rgba(145,134,145,1);
     font-size: 1.3em;
 }
 
+/* 
+    queda pendiente agg el btn de copiar txt encriptado, el crecimiento 
+    del div debe ser automatico o segun la cantidad de texto
+    
+    .message__btnCopiar{
+    text-align: center;
+    color: #0A3871;
+    background-color: #F3F5FC;
+    padding: 25px 0;
+    border: 1px solid #0A3871;
+    border-radius: 25px;
+    font-size: 1.3em;
+    width: 90%;
+    padding: 20px 0;
+} */
+
 .message{
     margin: 50px auto;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.message__container-img{
+    display: none;
 }
 
 .message__container{
@@ -184,4 +204,65 @@ box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
     }
 
     /** queda pendiente el desing desktop **/
+}
+
+@media (min-width: 768px) {
+
+    .header{
+        height: 25px;
+    }
+
+    .container{
+        margin: 0 auto;
+        width: 1440px;
+        padding: 5px 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 75px;
+    }
+
+    .message{
+        width: 400px;
+        height: 945px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+
+    .message__container{
+        width: inherit;
+        height: inherit;
+    }
+
+    .message__container-img{
+        width: 335px;
+        height: 300px;
+        display: block;
+        margin: 15px 0;
+    }
+
+    .img-muneco{
+        background-color: white;
+        width: 100%;
+    }
+
+    input{
+        width: 95%;
+        height: 680px;
+        background-color: inherit;
+        position: relative;
+        border: none;
+        color: #67808E;
+    }
+
+    .encryptor__message{
+        margin-top: 50px;
+    }
+
+    
 }
