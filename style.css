@@ -24,22 +24,19 @@
     align-items: center;
 }
 
-input{
-    width: 95%;
+.encryptor__textArea{
+    width: 100%;
     height: 350px;
-    background-color: inherit;
-    position: relative;
     border: none;
-    color: #67808E;
+    resize: none;
 }
 
-input::placeholder{
+textarea::placeholder {
     color: #0A3871;
-    font-size: 35px;
-    position: absolute;
-    top: 0;
+    font-size: 2.7em;
+    padding: 40px 18px;
+    outline: none;
 }
-
 .encryptor__message{
     display: flex;
     align-items: center;
@@ -86,22 +83,6 @@ box-shadow: -1px 21px 15px -15px rgba(145,134,145,1);
     font-size: 1.3em;
 }
 
-/* 
-    queda pendiente agg el btn de copiar txt encriptado, el crecimiento 
-    del div debe ser automatico o segun la cantidad de texto
-    
-    .message__btnCopiar{
-    text-align: center;
-    color: #0A3871;
-    background-color: #F3F5FC;
-    padding: 25px 0;
-    border: 1px solid #0A3871;
-    border-radius: 25px;
-    font-size: 1.3em;
-    width: 90%;
-    padding: 20px 0;
-} */
-
 .message{
     margin: 50px auto;
     display: flex;
@@ -113,9 +94,24 @@ box-shadow: -1px 21px 15px -15px rgba(145,134,145,1);
     display: none;
 }
 
+.message__encryptado{
+    width: 100%;
+    background-color: white;
+    max-height: 600px;
+    font-size: 1.25em;
+    color: #67808E;
+    border: none;
+    outline: none;
+    display: none;
+}
+
+/* .message__no-encryptado{
+    display: none;
+} */
+
 .message__container{
     width: 325px;
-    height: 234px;
+    min-height: 234px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -128,16 +124,31 @@ box-shadow: -1px 21px 15px -15px rgba(145,134,145,1);
     -webkit-box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
 -moz-box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
 box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
+
     
 }
 
+.message__btnCopiar{
+    text-decoration: none;
+    text-align: center;
+    color: #0A3871;
+    background-color: #F3F5FC;
+    padding: 25px 0;
+    border: 1px solid #0A3871;
+    border-radius: 25px;
+    font-size: 1.3em;
+    width: 95%;
+    display: none;
+}
+
 .message__title{
-    background: inherit;
+    background: white;
     font-size: 1.8em;
 }
 
+
 .message__paragraph{
-    background: inherit;
+    background: white;
     font-size: 1.3em;
     line-height: 30px;
 }
@@ -153,20 +164,6 @@ box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
 
     .header__logo{
         padding: 30px 25px;
-    }
-
-    input{
-        width: 700px;
-        height: 500px;
-        margin-top: 5px;
-    }
-    
-    input::placeholder{
-        color: #0A3871;
-        font-size: 45px;
-        position: absolute;
-        padding-top: 75px;
-        margin-left: 25px;
     }
 
     .container{
@@ -203,10 +200,15 @@ box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
         height: 160px;
     }
 
+/*     .message__no-encryptado{
+        display: none;
+        se activara y desactivara cada vez que se encripte algun texto
+    } */
+
     /** queda pendiente el desing desktop **/
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
 
     .header{
         height: 25px;
@@ -215,11 +217,10 @@ box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
     .container{
         margin: 0 auto;
         width: 1440px;
-        padding: 5px 18px;
+        padding: 5px 0px;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
-        gap: 75px;
     }
 
     .message{
@@ -232,11 +233,15 @@ box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
         align-items: center;
         overflow: hidden;
         margin-bottom: 30px;
+        border-radius: 25px;
     }
 
     .message__container{
         width: inherit;
         height: inherit;
+        -webkit-box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
+-moz-box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
+box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
     }
 
     .message__container-img{
@@ -251,18 +256,24 @@ box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
         width: 100%;
     }
 
-    input{
-        width: 95%;
-        height: 680px;
-        background-color: inherit;
-        position: relative;
-        border: none;
-        color: #67808E;
-    }
-
     .encryptor__message{
         margin-top: 50px;
     }
 
-    
-}
+    /* .message__container-img{
+        display: none;
+    } */
+
+    /* .message__no-encryptado{
+        display: none;
+    } */
+
+    .message__encryptado{
+        height: 950px;
+    }
+
+    /* .message__btnCopiar{
+        margin-top: 170px;
+        display: block;
+    } */
+} 
