@@ -8,6 +8,7 @@
 
 .header{
     height: 96px;
+    margin-bottom: 30px;
 }
 
 .container{
@@ -26,17 +27,22 @@
 
 .encryptor__textArea{
     width: 100%;
-    height: 350px;
     border: none;
     resize: none;
+    text-transform: lowercase;
+    font-size: 32px;
+    color: #0A3871;
+    margin-top: -20px;
 }
 
 textarea::placeholder {
     color: #0A3871;
-    font-size: 2.7em;
-    padding: 40px 18px;
+}
+
+.encryptor__textArea:focus{
     outline: none;
 }
+
 .encryptor__message{
     display: flex;
     align-items: center;
@@ -60,10 +66,11 @@ textarea::placeholder {
 
 .encryptor_encryp{
     text-decoration: none;
+    border: none;
     text-align: center;
     color: white;
     background-color: #0A3871;
-    padding: 25px 0;
+    padding: 20px 0;
     border-radius: 25px;
     font-size: 1.3em;
     -webkit-box-shadow: -1px 21px 15px -15px rgba(145,134,145,1);
@@ -103,11 +110,8 @@ box-shadow: -1px 21px 15px -15px rgba(145,134,145,1);
     border: none;
     outline: none;
     display: none;
+    resize: none;
 }
-
-/* .message__no-encryptado{
-    display: none;
-} */
 
 .message__container{
     width: 325px;
@@ -137,7 +141,7 @@ box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
     border: 1px solid #0A3871;
     border-radius: 25px;
     font-size: 1.3em;
-    width: 95%;
+    width: 100%;
     display: none;
 }
 
@@ -186,27 +190,42 @@ box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
     }
 
     .encryptor_encryp{
-        padding: 25px 120px;
+        padding: 20px 120px;
         box-shadow: none;
     }
     
     .encryptor_desencryp{
-        padding: 25px 120px;
+        padding: 20px 120px;
     }
 
     .message__container{
         margin-top: 20px;
         width: 685px;
-        height: 160px;
+        height: 225px;
     }
 
-/*     .message__no-encryptado{
-        display: none;
-        se activara y desactivara cada vez que se encripte algun texto
-    } */
+    .message__no-encryptado{
+        margin-top:45px;
+    }
+    .message__show{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        background-color: white;
+    }
 
-    /** queda pendiente el desing desktop **/
+    .message__encryptado{
+        height: 125px;
+    }
+
+    .message__container-img{
+        display: none;
+    }
 }
+
+/* Desktop */
 
 @media (min-width: 1440px) {
 
@@ -221,6 +240,11 @@ box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
         display: flex;
         justify-content: space-around;
         align-items: center;
+    }
+
+    .encryptor__textArea{
+        margin-top: -200px;
+        outline: none;
     }
 
     .message{
@@ -245,9 +269,9 @@ box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
     }
 
     .message__container-img{
+        display: block;
         width: 335px;
         height: 300px;
-        display: block;
         margin: 15px 0;
     }
 
@@ -260,20 +284,17 @@ box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
         margin-top: 50px;
     }
 
-    /* .message__container-img{
-        display: none;
-    } */
-
-    /* .message__no-encryptado{
-        display: none;
-    } */
+    .message__show{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        background-color: white;
+    }
 
     .message__encryptado{
         height: 950px;
+        margin-top: -50px;
     }
 
-    /* .message__btnCopiar{
-        margin-top: 170px;
-        display: block;
-    } */
 } 

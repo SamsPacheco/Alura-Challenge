@@ -15,15 +15,14 @@
     <main class="container">
 
         <section class="encryptor">
-            <!-- <input type="text" placeholder="Ingresa el texto aqui" class="inputText"> -->
             <textarea class="encryptor__textArea" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
             <p class="encryptor__message">
                 <img src="img/icon.svg" alt="icon-exclamacion" class="encryptor__message-img">
                 Solo letras minusculas y sin acentos
             </p>
             <div class="encryptor__buttons">
-                <a href="#" class="encryptor_encryp">Encriptar</a>
-                <a href="#" class="encryptor_desencryp">Desencriptar</a>
+                <button class="encryptor_encryp" onclick="btnEncrypt()" >Encriptar</a>
+                <button class="encryptor_desencryp" onclick="btnDecrypt()">Desencriptar</a>
             </div>
         </section>
 
@@ -32,16 +31,18 @@
                 <div class="message__container-img">
                     <img src="img/Muñeco.png" alt="muñeco-img" class="img-muneco">
                 </div>
-                <textarea class="message__encryptado" cols="30" rows="10"></textarea>
                 <div class="message__no-encryptado">
                     <h1 class="message__title">Ningún mensaje fue encontrado</h1>
                     <p class="message__paragraph">Ingresa el texto qe desees encriptar o desencriptar</p>
                 </div>
-                <Button class="message__btnCopiar">Copiar</Button> 
+                <div class="message__show">
+                    <textarea class="message__encryptado" cols="30" rows="10"></textarea>
+                    <Button class="message__btnCopiar" onclick="copyText()">Copiar</Button> 
+                </div>
             </div>
         </section>
 
     </main>
-    
+    <script src="index.js"></script>
 </body>
 </html>
