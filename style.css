@@ -157,6 +157,19 @@ box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
     line-height: 30px;
 }
 
+.footer{
+    text-align: center;
+    margin-top: -40px;  
+    opacity: 0.7;
+    color: black;
+    font-style: italic;
+}
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
 /** medias querys **/
 
 /** TABLETS **/
@@ -297,4 +310,4 @@ box-shadow: -1px 15px 32px -11px rgba(163,158,163,0.68);
         margin-top: -50px;
     }
 
-} 
+}
